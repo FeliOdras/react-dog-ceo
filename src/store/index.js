@@ -3,3 +3,5 @@ import createSagaMiddleware from 'redux-saga';
 import { watcherSaga } from '../saga';
 import { reducer } from '../reducers';
 
+const sagaMiddleware = createSagaMiddleware();
+
