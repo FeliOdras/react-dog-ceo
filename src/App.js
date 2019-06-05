@@ -4,7 +4,7 @@ import './App.css';
 
 import { connect } from 'react-redux';
 
-class App extends component {
+export class App extends React.Component {
   render() {
     const { fetching, dog, onRequestDog, error } = this.props;
 
@@ -26,10 +26,20 @@ class App extends component {
               <button className="btn btn-primary" onClick={onRequestDog}>Request dog</button>
             )
           }
+
+          {error && <p style={{ color: "red" }}>Uh oh - something went wrong!</p>}
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    fetching: state.fetching,
+    dog: state.dog,
+    error: state.error
+  }
+}
+
+
