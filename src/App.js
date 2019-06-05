@@ -18,7 +18,13 @@ class App extends component {
           ) : (
               <p className="App-intro">Replace React Icon with a dog!</p>
             )
+          }
 
+          {fetching ? (
+            <button class="btn btn-warning" disabled>Fetching...</button>
+          ) : (
+              <button className="btn btn-primary" onClick={onRequestDog}>Request dog</button>
+            )
           }
         </header>
       </div>
