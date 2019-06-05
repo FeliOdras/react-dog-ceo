@@ -21,7 +21,7 @@ export class App extends React.Component {
           }
 
           {fetching ? (
-            <button class="btn btn-warning" disabled>Fetching...</button>
+            <button className="btn btn-warning" disabled>Fetching...</button>
           ) : (
               <button className="btn btn-primary" onClick={onRequestDog}>Request dog</button>
             )
