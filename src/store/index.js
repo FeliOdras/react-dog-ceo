@@ -13,3 +13,5 @@ export const store = createStore(
     compose(applyMiddleware(sagaMiddleware), reduxDevTools)
 )
 
+sagaMiddleware.run(watcherSaga);
+
